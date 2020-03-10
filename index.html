@@ -20,25 +20,14 @@
           <i class="fa fa-calendar mr-2" aria-hidden="true"></i>
           Consultas Realizadas
         </h2>
-        <table class="table table-bordered">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Nome</th>
-              <th scope="col">Data da Consulta</th>
-              <th scope="col">Peso (kg)</th>
-              <th scope="col">Altura (m)</th>
-              <th scope="col">IMC</th>
-            </tr>
-          </thead>
-          <tbody id="tabela-de-pacientes">
-          </tbody>
-        </table>
+        <div id="consultasView" class="col-12"></div>
       </section>
       <section class="row">
         <h2 class="p-4 mt-4">
           <i class="fa fa-file-text-o mr-2" aria-hidden="true"></i>
           Cadastrar Consultas
         </h2>
+        <div id="mensagemView" class="col-12"></div>
         <form class="col-12" onsubmit="consultaController.adiciona(event)" novalidate>
           <div class="form-group">
             <label for="nome">Nome do Paciente</label>
@@ -65,7 +54,13 @@
         </form>
         </section>
     </section> 
-    <script type="text/javascript" src="js/model/Consulta.js"></script> 
+    <script type="text/javascript" src="js/model/Consulta.js"></script>  
+    <script type="text/javascript" src="js/model/Mensagem.js"></script>  
+    <script type="text/javascript" src="js/model/ListaConsulta.js"></script>
+    <script type="text/javascript" src="js/helpers/DateHelper.js"></script> 
+    <script type="text/javascript" src="js/views/View.js"></script>
+    <script type="text/javascript" src="js/views/ConsultaView.js"></script>
+    <script type="text/javascript" src="js/views/MensagemView.js"></script>
     <script type="text/javascript" src="js/controller/ConsultaController.js"></script>
     <script type="text/javascript"> 
       let consultaController = new ConsultaController(); 

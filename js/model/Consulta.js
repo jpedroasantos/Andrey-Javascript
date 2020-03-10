@@ -23,7 +23,7 @@ class Consulta {
         return this._altura;
     }
 
-    getImc() {
+    get imc() {
         return this._peso / (this._altura * this._altura);
     }
 }
