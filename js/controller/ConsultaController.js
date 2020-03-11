@@ -17,8 +17,8 @@ class ConsultaController {
         let consulta = this._criaConsulta(); 
         this._listaConsulta.adiciona(consulta); 
         this._mensagem.texto = "Consulta adicionada com sucesso";
-        this._mensagemView.update(this._mensagem);
         this._consultaView.update(this._listaConsulta);
+        this._mensagemView.update(this._mensagem);
         this._limpaFormulario();
     } 
 
@@ -32,10 +32,10 @@ class ConsultaController {
     } 
 
     _limpaFormulario() {
-        this._inputNome = "";
-        this._inputData = "";
-        this._inputPeso = "";
-        this._inputAltura = ""; 
+        this._inputNome.value ="";
+        this._inputData.value ="";
+        this._inputPeso.value ="";
+        this._inputAltura.value =""; 
 
         this._inputNome.focus(); 
     }

@@ -3,7 +3,7 @@ class ConsultaView extends View{
         super(elemento);
     }
 
-    template(modelo) {
+    _template(modelo) {
         return `
         <table class="table table-bordered">
             <thead class="thead-dark">
@@ -23,8 +23,8 @@ class ConsultaView extends View{
                     <td>${c.peso}</td>
                     <td>${c.altura}</td>
                     <td>${c.imc.toFixed(2)}</td>
-                </tr>    
-            `).join('')}
+                </tr>
+            `)}
         </tbody>
       </table>`
     }
